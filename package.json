@@ -1,0 +1,37 @@
+{
+  "name": "foreign-currency-trade",
+  "version": "1.0.0",
+  "description": "FC trade automation tool implemented in AWS Lambda,Node, and Headless chrome",
+  "main": "handler.js",
+  "scripts": {
+    "test": "ava -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eigo-Mt-Fuji/foreign-currency-trade.git"
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "Node",
+    "Headless",
+    "Chrome",
+    "Puppeteer",
+    "Serverless",
+    "Framework"
+  ],
+  "author": "Eigo Fujikawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eigo-Mt-Fuji/foreign-currency-trade/issues"
+  },
+  "homepage": "https://github.com/Eigo-Mt-Fuji/foreign-currency-trade#readme",
+  "devDependencies": {
+    "ava": "^0.24.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.184.0",
+    "env-yaml": "^0.1.2",
+    "puppeteer": "^1.0.0"
+  }
+}
