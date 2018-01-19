@@ -4,7 +4,8 @@
   "description": "FC trade automation tool implemented in AWS Lambda,Node, and Headless chrome",
   "main": "handler.js",
   "scripts": {
-    "test": "ava -- --watch"
+    "test": "ava -- --watch",
+    "lint": "node_modules/eslint/bin/eslint.js "
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   },
   "homepage": "https://github.com/Eigo-Mt-Fuji/foreign-currency-trade#readme",
   "devDependencies": {
-    "ava": "^0.24.0"
+    "ava": "^0.24.0",
+    "eslint": "^4.15.0"
   },
   "dependencies": {
     "aws-sdk": "^2.184.0",
