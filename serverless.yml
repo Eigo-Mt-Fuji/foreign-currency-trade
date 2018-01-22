@@ -5,10 +5,7 @@ provider:
   runtime: nodejs6.10
   stage: dev
   region: us-east-1
-  environment:
-    DEBUG: "*"
-    PAGE_LOAD_TIMEOUT: 20000
-    LOGGING: true
+  environment: ${file(.env.yml)}
 
 plugins:
   - serverless-plugin-chrome
@@ -20,26 +17,8 @@ custom:
     flags:
       - --window-size=1280x1696 # Letter size
       - --hide-scrollbars
-  dotenv:
-    - ${file: .env.yml}
 functions:
-  cron:
-    handler: src/handlers/cron.runCron
-    environment: ${file(.env.yml)}
-    description: Serverless cron
-    events:
-#      - schedule: rate(5 minutes)
-      - schedule: rate(1 minute)
-
-  express:
-    handler: src/handlers/test.main
-    description: test handler serverless-express
-    events:
-      - http:
-          method: get
-          path: '{proxy+}'
-
-  version-info:
+  headless-chrome-example:
     description: Headless Chrome Serverless-framework version info example
     memorySize: 1024
     timeout: 30
@@ -48,6 +27,21 @@ functions:
       - http:
           path: version-info
           method: get
+
+  scheduled-event-example:
+    handler: src/handlers/cron.runCron
+    description: Serverless cron
+    events:
+      - schedule: rate(5 minutes)
+
+  currency-transaction:
+    description: Foreign-currency tx request handler
+    handler: src/handlers/transaction.main
+    events:
+      - http:
+          method: ANY
+          path: '{proxy+}'
+
 resources:
   Resources:
     ApiGatewayRestApi:

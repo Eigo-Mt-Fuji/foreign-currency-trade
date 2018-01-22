@@ -40,6 +40,7 @@
   "homepage": "https://github.com/Eigo-Mt-Fuji/foreign-currency-trade#readme",
   "dependencies": {
     "@slack/client": "^3.15.0",
+    "body-parser": "^1.18.2",
     "bufferutil": "^3.0.3",
     "chrome-launcher": "^0.10.2",
     "chrome-remote-interface": "0.25.3",
