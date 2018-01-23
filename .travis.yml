@@ -13,6 +13,7 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_22aa0a535020_key -iv $encrypted_22aa0a535020_iv -in .env.yml.enc -out .env.yml -d
 install:
   - yarn global add serverless
+  - yarn global add serverless-plugin-chrome
   - yarn install
 script:
   - npm run test
