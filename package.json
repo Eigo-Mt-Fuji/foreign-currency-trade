@@ -50,7 +50,7 @@
     "utf-8-validate": "^4.0.0"
   },
   "devDependencies": {
-    "ava": "0.23.0",
+    "ava": "^0.24.0",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
     "babel-plugin-transform-object-entries": "1.0.0",
