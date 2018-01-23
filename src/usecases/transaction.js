@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const aws = require('aws-sdk');
 const util = require('util');
@@ -12,7 +12,7 @@ function Transaction(bucketName, basePath) {
 
     this.bucketName = bucketName;
     this.basePath = basePath;
-};
+}
 
 Transaction.prototype.save = function(key, contents) {
 
