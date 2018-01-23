@@ -17,5 +17,5 @@ install:
   - yarn install
 script:
   - npm run test
-after_success:
+deploy:
   - sh ./bin/deploy.sh
