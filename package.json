@@ -16,6 +16,7 @@
     "test": "npm run lint && npm run ava",
     "watch:test": "ava --watch",
     "deploy": "serverless deploy -v",
+    "offline": "rm -rf .build && sls offline start",
     "upgrade-dependencies": "yarn upgrade-interactive --latest --exact"
   },
   "repository": {

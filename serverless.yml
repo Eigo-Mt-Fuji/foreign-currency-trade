@@ -18,6 +18,12 @@ custom:
       - --window-size=1280x1696 # Letter size
       - --hide-scrollbars
 functions:
+  sbi-buy:
+    description: Check&buy foreign currency(US dollar) on SBI net bank, in routine.
+    handler: src/handlers/sbiBuy.sbiBuy
+    events:
+      - schedule: rate(1 minutes)
+
   headless-chrome-example:
     description: Headless Chrome Serverless-framework version info example
     memorySize: 1024
