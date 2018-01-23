@@ -25,8 +25,9 @@ Sbi.prototype.login = function() {
                     const { Network, Page } = client;
 
                     // setup handlers
-                    Network.requestWillBeSent((params) => {
-                        //console.log(params.request.url);
+                    Network.requestWillBeSent(() => {
+
+                        //console.debug(params.request.url);
                     });
 
                     Page.loadEventFired(() => {
