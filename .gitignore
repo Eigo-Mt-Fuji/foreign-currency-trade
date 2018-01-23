@@ -4,6 +4,7 @@ node_modules
 # Serverless directories
 .serverless
 .build
+.env.yml
 
 # Jetbrains
 .idea

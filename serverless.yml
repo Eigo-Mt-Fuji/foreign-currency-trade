@@ -22,7 +22,7 @@ functions:
     description: Check&buy foreign currency(US dollar) on SBI net bank, in routine.
     handler: src/handlers/sbiBuy.sbiBuy
     events:
-      - schedule: rate(1 minutes)
+      - schedule: rate(5 minutes)
 
   headless-chrome-example:
     description: Headless Chrome Serverless-framework version info example
@@ -33,12 +33,6 @@ functions:
       - http:
           path: version-info
           method: get
-
-#  scheduled-event-example:
-#    handler: src/handlers/cron.runCron
-#    description: Serverless cron
-#    events:
-#      - schedule: rate(5 minutes)
 
   currency-transaction:
     description: Foreign-currency tx request handler
