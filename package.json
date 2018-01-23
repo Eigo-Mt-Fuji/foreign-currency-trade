@@ -93,5 +93,8 @@
       "transform-object-rest-spread",
       "transform-object-entries"
     ]
+  },
+  "optionalDependencies": {
+    "fsevents": "^1.1.3"
   }
 }
