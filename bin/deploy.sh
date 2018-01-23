@@ -2,12 +2,8 @@
 
 set -e
 
-BRANCH=master
-if [[ $TRAVIS_TAG ]]; then
-  STAGE="production"
-elif [[ $TRAVIS_TAG == 'development' ]]; then
-  STAGE="dev"
-fi
+BRANCH=${TRAVIS_BRANCH:-$(git rev-parse --abbrev-ref HEAD)}
+STAGE="dev"
 
 if [ -z ${STAGE+x} ]; then
   echo "Not deploying changes";
