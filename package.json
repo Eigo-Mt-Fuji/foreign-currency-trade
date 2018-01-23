@@ -44,13 +44,12 @@
     "body-parser": "^1.18.2",
     "bufferutil": "^3.0.3",
     "chrome-launcher": "^0.10.2",
-    "chrome-remote-interface": "0.25.3",
+    "chrome-remote-interface": "0.25.5",
     "express": "^4.16.2",
     "serverless-http": "^1.5.3",
     "utf-8-validate": "^4.0.0"
   },
   "devDependencies": {
-    "@ava/babel-preset-stage-4": "^1.1.0",
     "ava": "^0.24.0",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
@@ -64,12 +63,12 @@
     "serverless-offline": "^3.16.0",
     "serverless-offline-scheduler": "^0.3.3",
     "serverless-plugin-chrome": "^1.0.0-34",
-    "webpack": "3.8.1"
+    "webpack": "3.10.0"
   },
   "ava": {
     "require": "babel-register",
     "files": [
-       "src/**/*.test.js"
+      "src/**/*.test.js"
     ]
   },
   "babel": {
@@ -88,13 +87,11 @@
           ]
         }
       ],
-      "stage-3",
-      "@ava/stage-4"
+      "stage-3"
     ],
     "plugins": [
       "transform-object-rest-spread",
-      "transform-object-entries",
-      "@ava/babel-preset-stage-4/package-hash"
+      "transform-object-entries"
     ]
   }
 }
