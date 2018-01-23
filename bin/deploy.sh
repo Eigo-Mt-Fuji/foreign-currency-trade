@@ -11,5 +11,5 @@ if [ -z ${STAGE+x} ]; then
 fi
 
 echo "Deploying from branch $BRANCH to stage $STAGE"
-npm prune --production  #remove devDependencies
-sls deploy --stage $STAGE --region $AWS_REGION
+#npm prune --production  #remove devDependencies
+sls deploy -v --stage $STAGE --region $AWS_REGION
