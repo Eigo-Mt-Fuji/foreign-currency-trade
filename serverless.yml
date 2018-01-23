@@ -34,11 +34,11 @@ functions:
           path: version-info
           method: get
 
-  scheduled-event-example:
-    handler: src/handlers/cron.runCron
-    description: Serverless cron
-    events:
-      - schedule: rate(5 minutes)
+#  scheduled-event-example:
+#    handler: src/handlers/cron.runCron
+#    description: Serverless cron
+#    events:
+#      - schedule: rate(5 minutes)
 
   currency-transaction:
     description: Foreign-currency tx request handler
